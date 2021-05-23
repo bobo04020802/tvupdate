@@ -46,6 +46,7 @@ import com.xuexiang.xupdate.utils.FileUtils;
 import com.xuexiang.xupdate.utils.UpdateUtils;
 
 import java.io.File;
+import java.io.IOException;
 
 import static com.xuexiang.xupdate.entity.UpdateError.ERROR.DOWNLOAD_FAILED;
 
