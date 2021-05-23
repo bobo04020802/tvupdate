@@ -85,9 +85,9 @@
                 android:minHeight="@dimen/xupdate_button_min_height"
                 android:text="@string/xupdate_lab_update"
                 android:textColor="@color/xupdate_button_text_color"
-                android:textSize="@dimen/xupdate_button_text_size" 
-				<requestFocus/>
-			</Button>
+                android:textSize="@dimen/xupdate_button_text_size"> 
+		<requestFocus/>
+	    </Button>
 
             <TextView
                 android:id="@+id/tv_ignore"
