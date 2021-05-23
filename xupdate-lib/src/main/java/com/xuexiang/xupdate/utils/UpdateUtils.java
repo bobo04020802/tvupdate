@@ -383,16 +383,18 @@ public final class UpdateUtils {
      */
     public static String getDiskCacheDir(Context context, String uniqueName) {
         String cachePath;
-        /*if (isSDCardEnable() && context.getExternalCacheDir() != null) {
+        if (isSDCardEnable() && context.getExternalCacheDir() != null) {
             cachePath = context.getExternalCacheDir().getPath();
         } else {
             cachePath = context.getCacheDir().getPath();
-        }*/
-        cachePath = context.getExternalCacheDir().getPath();
+        }
+        /*cachePath = context.getExternalCacheDir().getPath();
         System.out.println(cachePath);
         cachePath = context.getCacheDir().getPath();
         System.out.println(cachePath + File.separator + uniqueName);
-        return cachePath + File.separator + uniqueName;
+        return cachePath + File.separator + uniqueName;*/
+        System.out.println(cachePath);
+        return cachePath;
     }
 
     /**
