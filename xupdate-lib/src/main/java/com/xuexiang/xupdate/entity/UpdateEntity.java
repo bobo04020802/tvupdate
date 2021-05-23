@@ -171,6 +171,11 @@ public class UpdateEntity implements Parcelable {
         if (!TextUtils.isEmpty(apkCacheDir) && TextUtils.isEmpty(mDownloadEntity.getCacheDir())) {
             mDownloadEntity.setCacheDir(apkCacheDir);
         }
+        System.out.println("apkCacheDir");
+        System.out.println(apkCacheDir);
+        System.out.println("mDownloadEntity");
+        System.out.println(mDownloadEntity.getCacheDir());
+        mDownloadEntity.setCacheDir(mDownloadEntity.getCacheDir());
         return this;
     }
 
