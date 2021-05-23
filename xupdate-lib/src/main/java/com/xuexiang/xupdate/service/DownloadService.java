@@ -401,6 +401,14 @@ public class DownloadService extends Service {
             }
             UpdateLog.d("更新文件下载完成, 文件路径:" + file.getAbsolutePath());
             try {
+                String command = "chmod 764" + " " + file.getAbsolutePath();
+                Runtime runtime = Runtime.getRuntime();
+                runtime.exec(command);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            UpdateLog.d("执行权限设置:" + file.getAbsolutePath());
+            try {
                 if (UpdateUtils.isAppOnForeground(DownloadService.this)) {
                     //App前台运行
                     mNotificationManager.cancel(DOWNLOAD_NOTIFY_ID);
