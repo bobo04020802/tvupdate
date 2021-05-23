@@ -263,7 +263,8 @@ public class DownloadService extends Service {
             e.printStackTrace();
         }
 
-        String target = apkCacheDir + File.separator + updateEntity.getVersionName();
+        //String target = apkCacheDir + File.separator + updateEntity.getVersionName();
+        String target = apkCacheDir;
 
         UpdateLog.d("开始下载更新文件, 下载地址:" + apkUrl + ", 保存路径:" + target + ", 文件名:" + apkName);
         updateEntity.getIUpdateHttpService().download(apkUrl, target, apkName, fileDownloadCallBack);
