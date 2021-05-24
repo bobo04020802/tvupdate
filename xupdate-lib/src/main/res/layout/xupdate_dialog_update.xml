@@ -133,7 +133,8 @@
             <View
                 android:layout_width="@dimen/xupdate_close_line_width"
                 android:layout_height="@dimen/xupdate_close_line_height"
-                android:background="@color/xupdate_close_line_color" />
+                android:background="@color/xupdate_close_line_color" 
+		android:visibility="gone" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_close"
@@ -142,7 +143,8 @@
                 android:layout_marginTop="-2dp"
 		android:focusable="true"
                 app:srcCompat="@drawable/xupdate_icon_app_close" 
-		android:nextFocusUp="@+id/btn_update"/>
+		android:nextFocusUp="@+id/btn_update"
+		android:visibility="gone" />
 
         </LinearLayout>
     </LinearLayout>
