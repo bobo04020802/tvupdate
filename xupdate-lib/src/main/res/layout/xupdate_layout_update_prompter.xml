@@ -81,11 +81,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-				android:focusable="true"
+		android:focusable="true"
                 android:minHeight="@dimen/xupdate_button_min_height"
                 android:text="@string/xupdate_lab_update"
                 android:textColor="@color/xupdate_button_text_color"
-                android:textSize="@dimen/xupdate_button_text_size"> 
+                android:textSize="@dimen/xupdate_button_text_size"
+		android:nextFocusDown="@+id/ll_close" > 
 		<requestFocus/>
 	    </Button>
 
@@ -139,7 +140,9 @@
                 android:layout_width="@dimen/xupdate_close_icon_size"
                 android:layout_height="@dimen/xupdate_close_icon_size"
                 android:layout_marginTop="-2dp"
-                app:srcCompat="@drawable/xupdate_icon_app_close" />
+                app:srcCompat="@drawable/xupdate_icon_app_close" 
+		android:nextFocusUp="@+id/btn_update"
+                android:focusable="true"/>
 
         </LinearLayout>
 
