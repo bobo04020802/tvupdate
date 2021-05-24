@@ -323,6 +323,20 @@ public class UpdateDialogFragment extends DialogFragment implements View.OnClick
         mBtnUpdate.setTextColor(buttonTextColor);
         mBtnBackgroundUpdate.setTextColor(buttonTextColor);
     }
+    
+    View.OnFocusChangeListener listener;
+
+    listener = new View.OnFocusChangeListener() {
+        public void onFocusChange(View view, boolean b) {
+            if (b) {//当选中这个View时做一些你所需要的操作
+                view.setScaleX(1.2f);
+                view.setScaleY(1.2f);
+            } else {
+                view.setScaleX(1.0f);
+                view.setScaleY(1.0f);
+            }
+        }
+    }
 
     private void initListeners() {
         mBtnUpdate.setOnClickListener(this);
@@ -331,25 +345,14 @@ public class UpdateDialogFragment extends DialogFragment implements View.OnClick
         mTvIgnore.setOnClickListener(this);
         
         mBtnUpdate.setFocusable(true);
-        mBtnUpdate.setOnFocusChangeListener(this);
+        mBtnUpdate.setOnFocusChangeListener(listener);
         mBtnUpdate.setFocusableInTouchMode(true);
         mBtnUpdate.requestFocus();
-        mIvClose.setOnFocusChangeListener(this);
-        mTvIgnore.setOnFocusChangeListener(this);
+        mIvClose.setOnFocusChangeListener(listener);
+        mTvIgnore.setOnFocusChangeListener(listener);
         System.out.println("udialogfragment");
     }
     
-    @Override
-    public void onFocusChange(View view, boolean b) {
-        if (b) {//当选中这个View时做一些你所需要的操作
-            view.setScaleX(1.2f);
-            view.setScaleY(1.2f);
-        } else {
-            view.setScaleX(1.0f);
-            view.setScaleY(1.0f);
-        }
-
-    }
 
     @Override
     public void onClick(View view) {
