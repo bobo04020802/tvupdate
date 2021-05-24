@@ -264,6 +264,18 @@ public class UpdateDialogActivity extends AppCompatActivity implements View.OnCl
         mTvIgnore.setOnFocusChangeListener(this);
         System.out.println("dactivity");
     }
+    
+    @Override
+    public void onFocusChange(View view, boolean b) {
+        if (b) {//当选中这个View时做一些你所需要的操作
+            view.setScaleX(1.2f);
+            view.setScaleY(1.2f);
+        } else {
+            view.setScaleX(1.0f);
+            view.setScaleY(1.0f);
+        }
+
+    }
 
     @Override
     public void onStart() {
