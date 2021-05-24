@@ -78,6 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:focusable="true"
+                android:nextFocusDown="@+id/iv_close"
                 android:minHeight="@dimen/xupdate_button_min_height"
                 android:text="@string/xupdate_lab_update"
                 android:textColor="@color/xupdate_button_text_color"
@@ -121,19 +123,24 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone" >
 
             <View
                 android:layout_width="@dimen/xupdate_close_line_width"
                 android:layout_height="@dimen/xupdate_close_line_height"
-                android:background="@color/xupdate_close_line_color" />
+                android:background="@color/xupdate_close_line_color" 
+                android:visibility="gone" />
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:nextFocusUp="@+id/btn_update"
+                android:focusable="true"
                 android:id="@+id/iv_close"
                 android:layout_width="@dimen/xupdate_close_icon_size"
                 android:layout_height="@dimen/xupdate_close_icon_size"
                 android:layout_marginTop="-2dp"
-                app:srcCompat="@drawable/xupdate_icon_app_close" />
+                app:srcCompat="@drawable/xupdate_icon_app_close" 
+                android:visibility="gone" />
 
         </LinearLayout>
 
