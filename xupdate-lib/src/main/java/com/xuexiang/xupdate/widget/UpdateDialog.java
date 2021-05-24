@@ -168,7 +168,7 @@ public class UpdateDialog extends BaseDialog implements View.OnClickListener, ID
                 view.setScaleY(1.0f);
             }
         }
-    }
+    };
 
     @Override
     protected void initListeners() {
