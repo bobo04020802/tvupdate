@@ -253,9 +253,16 @@ public class UpdateDialogActivity extends AppCompatActivity implements View.OnCl
 
     private void initListeners() {
         mBtnUpdate.setOnClickListener(this);
+        mBtnUpdate.setFocusable(true);
+        mBtnUpdate.setOnFocusChangeListener(this);
+        mBtnUpdate.setFocusableInTouchMode(true);
+        mBtnUpdate.requestFocus();
         mBtnBackgroundUpdate.setOnClickListener(this);
         mIvClose.setOnClickListener(this);
         mTvIgnore.setOnClickListener(this);
+        mIvClose.setOnFocusChangeListener(this);
+        mTvIgnore.setOnFocusChangeListener(this);
+        System.out.println("dactivity");
     }
 
     @Override
