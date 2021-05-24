@@ -83,7 +83,7 @@
                     android:text="@string/xupdate_lab_update"
                     android:textColor="@color/xupdate_button_text_color"
                     android:textSize="@dimen/xupdate_button_text_size"
-		    android:nextFocusDown="@+id/ll_close" >
+		    android:nextFocusDown="@+id/iv_close" >
 		    <requestFocus/>
 		</Button>
 					
