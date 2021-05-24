@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-					android:focusable="true"
+		    android:focusable="true"
                     android:minHeight="@dimen/xupdate_button_min_height_mini"
                     android:text="@string/xupdate_lab_background_update"
                     android:textColor="@color/xupdate_button_text_color"
@@ -127,6 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <View
