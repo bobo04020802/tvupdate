@@ -336,7 +336,7 @@ public class UpdateDialogFragment extends DialogFragment implements View.OnClick
                 view.setScaleY(1.0f);
             }
         }
-    }
+    };
 
     private void initListeners() {
         mBtnUpdate.setOnClickListener(this);
