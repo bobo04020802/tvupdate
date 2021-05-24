@@ -324,21 +324,23 @@ public class UpdateDialogFragment extends DialogFragment implements View.OnClick
         mBtnBackgroundUpdate.setTextColor(buttonTextColor);
     }
     
-    View.OnFocusChangeListener listener;
-
-    listener = new View.OnFocusChangeListener() {
-        public void onFocusChange(View view, boolean b) {
-            if (b) {//当选中这个View时做一些你所需要的操作
-                view.setScaleX(1.2f);
-                view.setScaleY(1.2f);
-            } else {
-                view.setScaleX(1.0f);
-                view.setScaleY(1.0f);
-            }
-        }
-    };
+    
 
     private void initListeners() {
+        View.OnFocusChangeListener listener;
+
+        listener = new View.OnFocusChangeListener() {
+            public void onFocusChange(View view, boolean b) {
+                if (b) {//当选中这个View时做一些你所需要的操作
+                    view.setScaleX(1.2f);
+                    view.setScaleY(1.2f);
+                } else {
+                    view.setScaleX(1.0f);
+                    view.setScaleY(1.0f);
+                }
+            }
+        };
+        
         mBtnUpdate.setOnClickListener(this);
         mBtnBackgroundUpdate.setOnClickListener(this);
         mIvClose.setOnClickListener(this);
