@@ -263,7 +263,7 @@ public class UpdateDialogActivity extends AppCompatActivity implements View.OnCl
                 view.setScaleY(1.0f);
             }
         }
-    }
+    };
 
     private void initListeners() {
         mBtnUpdate.setOnClickListener(this);
